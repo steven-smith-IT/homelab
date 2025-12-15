@@ -1,0 +1,6 @@
+---
+collections:
+  # Install a collection from Ansible Galaxy.
+  - name: community.proxmox
+    version: ">=1.4.0"
+    source: https://galaxy.ansible.com
