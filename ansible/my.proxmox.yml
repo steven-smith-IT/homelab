@@ -3,5 +3,6 @@ url: https://192.168.42.151:8006/
 validate_certs: false
 # PROXMOX_USER and PROXMOX_PASSWORD are set via env variables
 gather_facts: true
+exclude_nodes: true
 compose:
   ansible_host: inventory_hostname ~ '.home'
