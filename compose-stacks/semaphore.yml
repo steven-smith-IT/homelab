@@ -15,8 +15,6 @@ services:
     ports:
       - 3000:3000
     image: semaphoreui/semaphore:latest
-    volumes: 
-      - /opt/stacks/semaphore/playbooks:/tmp/semaphore
     environment:
       SEMAPHORE_DB_USER: semaphore
       SEMAPHORE_DB_PASS: ${DB_PASS}
