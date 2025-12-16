@@ -2,7 +2,14 @@ plugin: community.proxmox.proxmox
 url: https://192.168.42.151:8006/
 validate_certs: false
 # PROXMOX_USER and PROXMOX_PASSWORD are set via env variables
-gather_facts: true
 exclude_nodes: true
 compose:
   ansible_host: inventory_hostname ~ '.home'
+want_facts: true
+keyed_groups:
+    # proxmox_tags_parsed is an example of a fact only returned when 'want_facts=true'
+  - key: proxmox_tags_parsed
+    separator: ""
+    prefix: group
+groups:
+  docker: "'docker' in (proxmox_tags_parsed|list)"
