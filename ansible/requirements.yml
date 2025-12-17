@@ -4,3 +4,9 @@ collections:
   - name: community.proxmox
     version: ">=1.4.0"
     source: https://galaxy.ansible.com
+
+roles:
+  - name: bpbradley.komodo
+    version: "1.3.0"
+  - name: geerlingguy.docker
+    version: "7.9.0"

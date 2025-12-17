@@ -1,0 +1,11 @@
+- name: install docker
+  hosts: all
+  roles:
+    - geerlingguy.docker
+
+- name: Manage Komodo Service
+  hosts: all
+  roles:
+      - role: bpbradley.komodo
+        komodo_action: "install"
+        komodo_version: "latest"
